@@ -95,6 +95,12 @@ def pregunta_01():
             color=colors[col],
         )
 
+    plt.xticks(
+        ticks=df.index,
+        labels=df.index,
+        ha='center'
+    )
+
     plt.tight_layout()
     if not os.path.exists("files/plots"):
         os.makedirs("files/plots")
